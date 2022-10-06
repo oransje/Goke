@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: Goke_test
+    ports:
+      - "3307:3306"

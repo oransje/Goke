@@ -1,0 +1,6 @@
+datasource: root:root@(127.0.0.1:3306)/Goke_test?charset=utf8mb4&parseTime=true 
+username: root
+password: root
+dialect: postgres
+host: localhost
+port: 3306
