@@ -37,6 +37,7 @@ var RootCmd = &cobra.Command{
 		figure := figure.NewFigure("Goke", "basic", true)
 		figure.Print()
 		fmt.Printf("Welcome, thanks for using Goke currently version is -v %s, to get started goke --help\n", VERSION)
+
 		if initGoke {
 			_, err := handlers.CreateMigrationsDir()
 			if !os.IsNotExist(err) {

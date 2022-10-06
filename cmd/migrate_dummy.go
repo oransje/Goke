@@ -6,18 +6,27 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/vsantos1/Goke/config"
 	"github.com/vsantos1/Goke/database"
+	"github.com/vsantos1/Goke/handlers"
 )
 
+var schema string
 var migrateCmd = &cobra.Command{
 	Use:   "migrate",
 	Short: "Migrate your sql model from dummy to database",
 	Run: func(cmd *cobra.Command, args []string) {
 		time.Sleep(1000)
 
-		c, err := config.ReadConfigFile("config.yaml")
-		mig := database.Migrate(c, database.ReadDummyBytes())
+		c, err := config.ReadConfigFile("goke-config.yaml")
 		if err != nil {
-			panic("Error while reading file config.yaml ")
+			panic("Error while reading file goke-config..yaml ")
+		}
+
+		handlers.CreateHistoryDb(schema, database.ReadDummyBytes())
+
+		mig := handlers.HandleWithMigrateModel(c, database.ReadDummyBytes())
+
+		if err != nil {
+			panic("Error while reading file goke-config..yaml ")
 		}
 		println(mig)
 	},
@@ -25,5 +34,6 @@ var migrateCmd = &cobra.Command{
 
 func init() {
 
+	migrateCmd.Flags().StringVarP(&schema, "name", "n", "initial", "Create history for migrations")
 	RootCmd.AddCommand(migrateCmd)
 }
