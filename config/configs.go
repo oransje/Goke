@@ -29,7 +29,7 @@ func ReadConfigFile(filename string) (*ConfigYaml, error) {
 	err = yaml.Unmarshal(buf, config)
 
 	if err != nil {
-		return nil, fmt.Errorf("failed to deserealize %s.yaml", filename)
+		return nil, fmt.Errorf("failed to deserialize %s.yaml", filename)
 	}
 
 	return config, err
