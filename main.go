@@ -8,9 +8,9 @@ import (
 func main() {
 	cmd.RootCmd.Use = "goke"
 	cmd.Execute()
-	_, err := config.ReadConfigFile("config.yaml")
+	_, err := config.ReadConfigFile("goke-config.yaml")
 	if err != nil {
-		panic("Error, file format is invalid delete the old config.yaml")
+		panic("Error, file format is invalid delete the old goke-config.yaml")
 	}
 
 }

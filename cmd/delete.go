@@ -15,9 +15,9 @@ var dropCmd = &cobra.Command{
 	Short: "Drop database model from database",
 	Run: func(cmd *cobra.Command, args []string) {
 		time.Sleep(1000)
-		c, err := config.ReadConfigFile("config.yaml")
+		c, err := config.ReadConfigFile("goke-config.yaml")
 		if err != nil {
-			panic("Error while reading file config.yaml ")
+			panic("Error while reading file goke-config.yaml ")
 		}
 		mig, err := database.DropDatabaseSchema(c, table)
 		if err != nil {
