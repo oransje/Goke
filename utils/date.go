@@ -13,3 +13,9 @@ func FormatDate() string {
 	return date
 
 }
+func TimeNowFormatted() time.Time {
+	now := time.Now()
+	now.Format(time.RFC822)
+
+	return now
+}

@@ -13,7 +13,7 @@ var version bool
 var initGoke bool
 var RootCmd = &cobra.Command{
 	SilenceUsage: true,
-	Short:        "Goke is schema migrations for golang's database/sql",
+	Short:        "Goke is schema migrations for database/sql",
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		// Create base configuration to connect on database if not exists
 		file, err := os.OpenFile("goke-config.yaml", 0, 0644)

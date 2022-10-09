@@ -10,12 +10,12 @@ import (
 
 var testCmd = &cobra.Command{
 	Use:   "test",
-	Short: "Test your database connection from config.yaml",
+	Short: "Test your database connection from goke-config.yaml",
 	Run: func(cmd *cobra.Command, args []string) {
 		time.Sleep(1000)
-		c, err := config.ReadConfigFile("config.yaml")
+		c, err := config.ReadConfigFile("goke-config.yaml")
 		if err != nil {
-			panic("Error while reading file config.yaml ")
+			panic("Error while reading file goke-config.yaml ")
 		}
 
 		// Test base configuration to connect on database if not exists

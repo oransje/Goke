@@ -5,18 +5,21 @@ import (
 	"log"
 
 	"github.com/vsantos1/Goke/config"
+	"github.com/vsantos1/Goke/utils"
 )
 
 func DropDatabaseSchema(c *config.ConfigYaml, table string) (string, error) {
 	db := ConnectionDatabase(c)
-	var QUERY_DROP = fmt.Sprintf("DROP TABLE IF EXISTS %s", table)
+	if table == "" {
+		log.Fatal("cannot delete empty table name")
 
-	err := db.MustExec(QUERY_DROP)
-
-	if err != nil {
-		log.Fatalf("%v", err)
 	}
 
+	var QUERY_DROP = fmt.Sprintf("DROP TABLE %s", table)
+
+	db.MustExec(QUERY_DROP)
+	var message = fmt.Sprintf("successfully dropped database %s at %s", table, utils.FormatDate())
+
 	db.Close()
-	return "Deleted", nil
+	return message, nil
 }

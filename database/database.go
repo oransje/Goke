@@ -6,13 +6,13 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
+	_ "github.com/mattn/go-sqlite3"
 	"github.com/vsantos1/Goke/config"
 )
 
 func TestDatabaseconnection(cfg *config.ConfigYaml) string {
 	ConnectionDatabase(cfg)
 	message := "Everything Working fine, ready to use."
-
 	return message
 }
 

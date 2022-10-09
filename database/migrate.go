@@ -9,7 +9,7 @@ import (
 // FIX
 func readDummyByte() []byte {
 	file, err := os.OpenFile("dummy.sql", os.O_RDONLY, os.ModePerm)
-	var t []byte
+	var byt []byte
 	if err != nil {
 		log.Fatalf("failed while trying to %v", err)
 	}
@@ -18,13 +18,13 @@ func readDummyByte() []byte {
 	sc := bufio.NewScanner(file)
 
 	for sc.Scan() {
-		t = sc.Bytes()
+		byt = sc.Bytes()
 	}
 
 	if err := sc.Err(); err != nil {
 		log.Fatalf("scan file error: %v", err)
 	}
 
-	return t
+	return byt
 
 }
