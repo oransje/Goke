@@ -26,7 +26,7 @@ func DropDatabaseSchema(c *config.ConfigYaml, table string) ReturnType {
 	db.MustExec(QUERY_DROP)
 	now := time.Now()
 
-	var msg = fmt.Sprintf("successfully dropped database %s at %s", table, now.Format(time.RFC822))
+	var msg = fmt.Sprintf("successfully dropped table %s at %s", table, now.Format(time.RFC822))
 	var returnType = ReturnType{
 		Message: msg,
 		Problem: nil,

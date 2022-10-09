@@ -8,12 +8,13 @@ import (
 )
 
 type ConfigYaml struct {
-	Datasource string `yaml:"datasource"`
-	Username   string `yaml:"username"`
-	Password   string `yaml:"password"`
-	Dialect    string `yaml:"dialect"`
-	Host       string
-	Port       int64
+	Username string `yaml:"username"`
+	Password string `yaml:"password"`
+	Dialect  string `yaml:"dialect"`
+	SslMode  string `yaml:"sslmode"`
+	DbName   string `yaml:"dbname"`
+	Host     string
+	Port     int64
 }
 
 func ReadConfigFile(filename string) (*ConfigYaml, error) {

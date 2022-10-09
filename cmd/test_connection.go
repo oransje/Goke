@@ -15,7 +15,7 @@ var testCmd = &cobra.Command{
 		time.Sleep(1000)
 		c, err := config.ReadConfigFile("goke-config.yaml")
 		if err != nil {
-			panic("Error while reading file goke-config.yaml ")
+			panic("Error while reading file goke-config ")
 		}
 
 		// Test base configuration to connect on database if not exists

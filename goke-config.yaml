@@ -1,6 +1,7 @@
-datasource: root:root@(localhost:3306)/Goke_test?charset=utf8mb4&parseTime=true
 username: root
 password: root
-dialect: mysql
+dialect: mydsqlwsad
+sslmode: disable
+dbname: Goke_test
 host: localhost
 port: 3306
