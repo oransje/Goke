@@ -64,7 +64,7 @@ $ goke --drop --t ${TABLE_NAME} # drop table if exists
 
 ```
 
-## Dump MariaDB schema to **JSON** file
+## Dump POSTGRES schema to **JSON** file
 
 ```bash
 $ goke dump --json # dump POSTGRES schema to JSON file
