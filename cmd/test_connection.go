@@ -20,7 +20,7 @@ var testCmd = &cobra.Command{
 
 		// Test base configuration to connect on database if not exists
 		println(database.TestDatabaseconnection(c))
-		defer database.CloseDatabase(c)
+		//defer database.CloseDatabase(c)
 
 	},
 }

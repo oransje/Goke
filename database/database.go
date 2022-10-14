@@ -22,9 +22,9 @@ func WichDatabase(cfg *config.ConfigYaml) (string, string) {
 
 	var DB_SQLITE3 = "./db.sqlite3"
 
-	var toLower = strings.ToLower(cfg.Dialect)
+	var dial = strings.ToLower(cfg.Dialect)
 
-	dialect := utils.ReturnDialectSource(toLower)
+	dialect := utils.ReturnDialectSource(dial)
 
 	if dialect == "postgres" {
 		return DB_POSTGRES, dialect
@@ -32,9 +32,8 @@ func WichDatabase(cfg *config.ConfigYaml) (string, string) {
 		return DB_MYSQL, dialect
 	} else if dialect == "sqlite3" {
 		return DB_SQLITE3, dialect
-
 	} else if dialect == "mariadb" {
-		return DB_MARIADB, "mysql"
+		return DB_MARIADB, dialect
 	} else {
 		return dialect, dialect
 	}
@@ -58,11 +57,8 @@ func ConnectionDatabase(cfg *config.ConfigYaml) *sqlx.DB {
 	if err != nil {
 		log.Fatalf("%v", err.Error())
 	}
+	defer db.Close()
+
 	db.SetConnMaxLifetime(5)
 	return db
-}
-
-func CloseDatabase(cfg *config.ConfigYaml) {
-	db := ConnectionDatabase(cfg)
-	db.Close()
 }

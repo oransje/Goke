@@ -1,19 +1,22 @@
 # GOKE <img width="64px" src="./examples/gopher.png"/>
+
 #### A simple and useful CLI used for database management
 
 ## Descritpion
+
 Goke is a CLI used for database management. It is written in Go and uses the SQL syntax. It is a simple and useful tool for database management, a simple command and migrate your SQL schema easily.
 
 ## How to use
+
 - Clone the repository
 - Run `go build` to build the project
 
-OR 
+OR
 
-- Download the binary file from the [release page](
-    https://github.com/vsantos1/Goke/releases)
-    - Create a path to the binary file
+- Download the binary file from the [release page](https://github.com/vsantos1/Goke/releases)
+  - Create a path to the binary file
 - Running the binary file
+
 ```bash
 
 #Windows
@@ -27,6 +30,7 @@ export ${NAME}=${PATH_TO_BIN}
 export ${NAME}=${PATH_TO_BIN}
 
 ```
+
 ## Features
 
 - [x] Create tables
@@ -51,12 +55,12 @@ export ${NAME}=${PATH_TO_BIN}
 
 - [x] NoSQL databases
 
-## Examples 
+## Examples
 
 - MYSQL
 - POSTGRESQL
 - SQLITE3
-- **MARIADB** (Not supported yet)
+- **MARIADB** (FIXED)
 - **SQL SERVER** (Not supported yet)
 
 **Note:** Docker is required to run the examples, otherwise you can run the examples directly on your machine or run the `SQLITE3` example.
@@ -64,17 +68,21 @@ export ${NAME}=${PATH_TO_BIN}
 #### Running database Drivers
 
 - docker file contains the following database drivers
+
 1. MYSQL
 2. POSTGRESQL
 3. MARIADB
+
 ```bash
 $ docker-compose up -d
 ```
+
 #### Running Goke CLI
 
 ```bash
 $ goke # check if the path is set
 ```
+
 ```bash
 #Full command
 
@@ -88,6 +96,7 @@ $ goke -v # To see the version
 $ goke -i # Initialize goke in the current directory
 
 ```
+
 #### Will create a file called `goke-config.yaml` in the current directory with the following content
 
 ```yaml
@@ -104,52 +113,43 @@ port: 3306
 #### Testing connection with the database
 
 ```bash
-$ goke test 
+$ goke test
 ```
+
 ### Creating a table
 
 ```bash
 #No args
-$ goke migrate 
+$ goke migrate
 #Full command
-$ goke migrate --name ${MIGRATION_NAME} 
+$ goke migrate --name ${MIGRATION_NAME}
 #Shorthand
 $ goke migrate -n ${MIGRATION_NAME}
 
-Response 
+Response
 "successfully created table file name start's with ${FILE_NAME} at ${DATE_TIME}"
 ```
-### Dropping a table
 
+### Dropping a table
 
 ```bash
 
 #Full command
-$ goke drop --table ${TABLE_NAME} 
+$ goke drop --table ${TABLE_NAME}
 #Shorthand
 $ goke drop -t ${TABLE_NAME}
 
-Response 
+Response
 "successfully dropped table ${TABLE_NAME} at ${DATE_TIME}"
 ```
 
 # Release
-- [x] v0.1.0
-[Release page](
-https://github.com/vsantos1/Goke/releases)
 
+- [x] v0.1.0
+      [Release page](https://github.com/vsantos1/Goke/releases)
 
 # License
-[MIT](
-    https://opensource.org/licenses/MIT)
+
+[MIT](https://opensource.org/licenses/MIT)
 
 - Feel free to contribute to the project and make "your version" 😁
-
-
-
-
-
-
-
-
-
