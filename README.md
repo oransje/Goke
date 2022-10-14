@@ -38,9 +38,9 @@ export ${NAME}=${PATH_TO_BIN}
 - [x] Drop tables
 - [x] Migration history for dropped tables
 - [x] Migration history for created tables
-- [ ] Dump tables to a json file
+- [x] Dump tables to a json file
 - [ ] Dump tables to a csv file
-- [ ] Loads data from a json file
+- ~~[ ] Loads data from a json file~~
 - ~~[ ] Loads data from a csv file~~
 
 ## Supported databases
@@ -143,13 +143,29 @@ Response
 "successfully dropped table ${TABLE_NAME} at ${DATE_TIME}"
 ```
 
+### Dumping tables to **JSON** file
+
+```bash
+
+#Full command
+$ goke dump --dump ${TABLE_NAME}
+#Shorthand
+$ goke drop -d ${TABLE_NAME}
+
+Response
+"successfully dumpped table ${TABLE_NAME} at ${DATE_TIME}"
+```
+
 # Release
 
 - [x] v0.1.0
+      [Release page](https://github.com/vsantos1/Goke/releases)
+
+- [x] v0.1.1 (**NEW**)
       [Release page](https://github.com/vsantos1/Goke/releases)
 
 # License
 
 [MIT](https://opensource.org/licenses/MIT)
 
-- Feel free to contribute to the project and make "your version" 😁
+- Feel free to contribute to the project and make "your own version" 😁

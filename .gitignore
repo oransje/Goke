@@ -5,8 +5,10 @@
 *.so
 *.dylib
 
-#Ignore sql files
+#Ignore goke files
 *.sql
+*.sqlite3
+*.json
 
 # Test binary, built with `go test -c`
 *.test
