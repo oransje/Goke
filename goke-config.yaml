@@ -1,6 +1,6 @@
 username: root
 password: root
-dialect: mysql
+dialect: sqlite
 sslmode: disable
 dbname: Goke_test
 host: localhost

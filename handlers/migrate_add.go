@@ -13,7 +13,7 @@ func HandleWithMigrateModel(cfg *config.ConfigYaml, sql []byte, file string) Ret
 
 	db.MustExec(string(sql))
 
-	db.Close()
+	defer db.Close()
 	now := time.Now()
 	var msg = fmt.Sprintf("successfully created table file name start's with %s at %s", file, now.Format(time.RFC822))
 	var returnType = ReturnType{
