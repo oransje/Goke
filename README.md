@@ -34,14 +34,14 @@ export ${NAME}=${PATH_TO_BIN}
 ## Features
 
 - [x] Create tables
-- ~~[ ] Create a database~~
+- [ ] ~~Create a database~~
 - [x] Drop tables
 - [x] Migration history for dropped tables
 - [x] Migration history for created tables
 - [x] Dump tables to a json file
 - [ ] Dump tables to a csv file
-- ~~[ ] Loads data from a json file~~
-- ~~[ ] Loads data from a csv file~~
+- [ ] ~~Loads data from a json file~~
+- [ ] ~~Loads data from a csv file~~
 
 ## Supported databases
 
