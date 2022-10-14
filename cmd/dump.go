@@ -35,6 +35,6 @@ var dumpCmd = &cobra.Command{
 
 func init() {
 
-	dumpCmd.Flags().StringVarP(&tb_name, "dump", "d", "goke_default", "Dump table schema to json") 
+	dumpCmd.Flags().StringVarP(&tb_name, "json", "j", "goke_default", "Dump table schema to json") 
 	RootCmd.AddCommand(dumpCmd)
 }

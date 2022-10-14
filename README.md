@@ -148,15 +148,21 @@ Response
 ```bash
 
 #Full command
-$ goke dump --dump ${TABLE_NAME}
+$ goke dump --json ${TABLE_NAME}
 #Shorthand
-$ goke drop -d ${TABLE_NAME}
+$ goke drop -j ${TABLE_NAME}
 
 Response
 "successfully dumpped table ${TABLE_NAME} at ${DATE_TIME}"
 ```
 
+# EXAMPLES
+
+- [EXAMPLES](https://github.com/vsantos1/Goke/tree/main/examples)
+
 # Release
+
+aaaaaaaaaaaaaa
 
 - [x] v0.1.0
       [Release page](https://github.com/vsantos1/Goke/releases)
