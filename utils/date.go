@@ -8,7 +8,7 @@ import (
 func FormatDate() string {
 	t := time.Now()
 
-	date := fmt.Sprintf("%d-%01d", int(t.Month()), t.Day())
+	date := fmt.Sprintf("%d_%01d_%02d", int(t.Year()), t.Month(),t.Day())
 
 	return date
 

@@ -24,7 +24,7 @@ func CreateMigrationsDir() (*os.File, error) {
 
 func CreateHistoryDb(schema string, b []byte) {
 
-	var FILE_PATH = fmt.Sprintf("./migrations/%s_ADD_%s.sql", schema, utils.FormatDate())
+	var FILE_PATH = fmt.Sprintf("./migrations/%s_ADD_%s.sql", utils.FormatDate(), schema)
 	errs := os.WriteFile(FILE_PATH, b, os.ModePerm)
 
 	if errs != nil {

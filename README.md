@@ -26,8 +26,6 @@ $ goke migrate
 
 **NOTE**: Will generate a migration file with random shortname if you don't use the flag `-n` or `--name`, and current timestamp.
 
-<img  src="./examples/migrated_todo.png"/>
-
 ```shell
 $ goke dump --json todo
 ```
@@ -209,6 +207,18 @@ Response
 
 - [x] v0.1.2
       [Release page](https://github.com/vsantos1/Goke/releases) (**NEW**) - Added support for MariaDB
+
+**OLD**
+
+<img  src="./examples/migrated_todo.png"/>
+
+`name_(ADD/DROP)_month/day`
+
+**NEW**
+
+<img  src="./examples/migrated_new.png"/>
+
+`year_month_day_(ADD/DROP)_name`
 
 # License
 

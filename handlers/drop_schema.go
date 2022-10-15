@@ -11,7 +11,7 @@ func DropSchemaHistory(table string) {
 
 	var DROP = fmt.Sprintf("/* DROPPED TABLE %s at %s */", table, utils.FormatDate())
 	var history = []byte(DROP)
-	var FILE_PATH = fmt.Sprintf("./migrations/%s_DROP_%s.sql", table, utils.FormatDate())
+	var FILE_PATH = fmt.Sprintf("./migrations/%s_DROP_%s.sql", utils.FormatDate(),table)
 	errs := os.WriteFile(FILE_PATH, history, os.ModePerm)
 
 	if errs != nil {
