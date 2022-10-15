@@ -13,7 +13,7 @@ var version bool
 var initGoke bool
 var RootCmd = &cobra.Command{
 	SilenceUsage: true,
-	Short:        "Goke is schema migrations for database/sql",
+	Short:        "Goke is a manager for database/sql",
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		// Create base configuration to connect on database if not exists
 		file, err := os.OpenFile("goke-config.yaml", 0, 0644)
@@ -23,12 +23,13 @@ var RootCmd = &cobra.Command{
 			if errs != nil {
 				panic("Failed while creating dummy.sql")
 			}
-			dummy.WriteString(dum)
+			dummy.WriteString(TODO_DUMMY)
 			file.WriteString("username: root\n")
 			file.WriteString("password: root\n")
 			file.WriteString("dialect: mysql\n")
 			file.WriteString("sslmode: disable\n")
 			file.WriteString("dbname: Goke_test\n")
+			file.WriteString("sqlite_name: goke-test\n")
 			file.WriteString("host: localhost\n")
 			file.WriteString("port: 3306")
 			if err != nil {

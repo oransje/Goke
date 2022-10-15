@@ -13,6 +13,7 @@ type ConfigYaml struct {
 	Dialect  string `yaml:"dialect"`
 	SslMode  string `yaml:"sslmode"`
 	DbName   string `yaml:"dbname"`
+	SqliteName string `yaml:"sqlite_name"`
 	Host     string
 	Port     int64
 }

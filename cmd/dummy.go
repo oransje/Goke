@@ -1,10 +1,12 @@
 package cmd
 
-var dum = `CREATE TABLE IF NOT EXISTS Persons(
+var TODO_DUMMY = `CREATE TABLE IF NOT EXISTS todo(
     id int NOT NULL,
-    last_name varchar(255),
-    first_name varchar(255),
-    city varchar(255),
+    title varchar(255),
+    content varchar(255),
+    created_at datetime,
+    updated_at datetime,
+    done boolean DEFAULT false,
     PRIMARY KEY(ID)
 )
 `

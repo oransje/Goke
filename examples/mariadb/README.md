@@ -6,6 +6,8 @@ This example shows how to run GOKE with [MariaDB](https://mariadb.org/) database
 
 goke --help
 
+goke test
+
 - --help is full command to see the help
 - -h is shorthand to see the help
 
@@ -70,9 +72,9 @@ $ goke dump -j # dump MariaDB schema to JSON file
 
 ```
 
-## ./migrations
+## **FOLDER** ./migrations
 
-This folder contanis all migrations files.
+This folder contains all migrations files.
 
 - JSON
 - SQL

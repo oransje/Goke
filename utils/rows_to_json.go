@@ -25,10 +25,7 @@ func Jsonify(rows *sql.Rows) ([]string) {
 	data := []string{}
 
 	for rows.Next() {
-		if c > 0 {
-			data = append(data, ",")
-		}
-
+		
 		err = rows.Scan(scanArgs...)
 		if err != nil {
 			panic(err.Error())

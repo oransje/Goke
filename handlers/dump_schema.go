@@ -24,7 +24,7 @@ func DumpSchema(table string,cfg *config.ConfigYaml) ReturnType {
 	res,_ := db.Query(SELECT_QUERY)
 	
 	a := utils.Jsonify(res)
-	out,err := json.MarshalIndent(a,"","")
+	out,err := json.Marshal(a)
 
 	if err != nil {
 		panic(err)

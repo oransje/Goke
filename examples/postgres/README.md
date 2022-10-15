@@ -22,7 +22,7 @@ goke test
 **NOTE** : The table name should be the same as the `TABLE_NAME` name, otherwise can't manage the table.
 
 ````bash
-Start MariaDB with the following command:
+Start POSTGRES with the following command:
 
 ```bash
 # docker-compose.yaml file contains POSTGRES service
@@ -72,9 +72,9 @@ $ goke dump -j # dump POSTGRES schema to JSON file
 
 ```
 
-## ./migrations
+## **FOLDER** ./migrations
 
-This folder contanis all migrations files.
+This folder contains all migrations files.
 
 - JSON
 - SQL

@@ -12,7 +12,7 @@ var table string
 
 var dropCmd = &cobra.Command{
 	Use:   "drop",
-	Short: "Drop database model from database",
+	Short: "Drop table from database",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		time.Sleep(1000)
 		c, err := config.ReadConfigFile("goke-config.yaml")

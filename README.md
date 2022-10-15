@@ -6,6 +6,44 @@
 
 Goke is a CLI used for database management. It is written in Go and uses the SQL syntax. It is a simple and useful tool for database management, a simple command and migrate your SQL schema easily.
 
+# Helpful examples
+
+```shell
+$ goke
+```
+
+<img  src="./examples/goke.png"/>
+
+```shell
+$ goke --help
+```
+
+<img  src="./examples/help.png"/>
+
+```shell
+$ goke migrate
+```
+
+**NOTE**: Will generate a migration file with random shortname if you don't use the flag `-n` or `--name`, and current timestamp.
+
+<img  src="./examples/migrated_todo.png"/>
+
+```shell
+$ goke dump --json todo
+```
+
+<img  src="./examples/todo_table.png"/>
+
+<img  src="./examples/dumpped_table.png"/>
+
+The **JSON** is Readable?,
+Yes, it is.
+
+- JSON
+  - Reading the JSON file with `PYTHON`:
+
+<img  src="./examples/read_json.png"/>
+
 ## How to use
 
 - Clone the repository
@@ -161,8 +199,6 @@ Response
 - [EXAMPLES](https://github.com/vsantos1/Goke/tree/main/examples)
 
 # Release
-
-aaaaaaaaaaaaaa
 
 - [x] v0.1.0
       [Release page](https://github.com/vsantos1/Goke/releases)

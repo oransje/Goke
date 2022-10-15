@@ -20,7 +20,7 @@ func WichDatabase(cfg *config.ConfigYaml) (string, string) {
 
 	var DB_MARIADB = fmt.Sprintf("host=%s sslmode=%s port=%d user=%s password=%s dbname=%s", cfg.Host, cfg.SslMode, cfg.Port, cfg.Username, cfg.Password, cfg.DbName)
 
-	var DB_SQLITE3 = "./goke-db.sqlite3"
+	var DB_SQLITE3 = fmt.Sprintf("./%s.sqlite3", cfg.SqliteName)
 
 	var dial = strings.ToLower(cfg.Dialect)
 
