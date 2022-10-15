@@ -45,7 +45,7 @@ Yes, it is.
 ## How to use
 
 - Clone the repository
-- Run `go build` to build the project
+- Run `build.sh` to build the project binary file
 
 OR
 
