@@ -199,13 +199,16 @@ Response
 
 - [EXAMPLES](https://github.com/vsantos1/Goke/tree/main/examples)
 
-# Release
+# Change logs
 
 - [x] v0.1.0
       [Release page](https://github.com/vsantos1/Goke/releases)
 
-- [x] v0.1.1 (**NEW**)
+- [x] v0.1.1
       [Release page](https://github.com/vsantos1/Goke/releases)
+
+- [x] v0.1.2
+      [Release page](https://github.com/vsantos1/Goke/releases) (**NEW**) - Added support for MariaDB
 
 # License
 
