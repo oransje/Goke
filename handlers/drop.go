@@ -23,7 +23,12 @@ func DropDatabaseSchema(c *config.ConfigYaml, table string) ReturnType {
 
 	var QUERY_DROP = fmt.Sprintf("DROP TABLE %s", table)
 
-	db.MustExec(QUERY_DROP)
+	_,err := db.Exec(QUERY_DROP)
+
+	if err != nil {
+		log.Fatalf("No table found with name %s", table)
+	}
+	
 	now := time.Now()
 
 	var msg = fmt.Sprintf("successfully dropped table %s at %s", table, now.Format(time.RFC822))

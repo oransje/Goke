@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"fmt"
+	"log"
 	"time"
 
 	"github.com/vsantos1/Goke/config"
@@ -11,8 +12,11 @@ import (
 func HandleWithMigrateModel(cfg *config.ConfigYaml, sql []byte, file string) ReturnType {
 	db := database.ConnectionDatabase(cfg)
 
-	db.MustExec(string(sql))
-
+	_,err := db.Exec(string(sql))
+	if err != nil {
+		log.Fatalf("Failed to execute %s", file)
+	}
+	
 	defer db.Close()
 	now := time.Now()
 	var msg = fmt.Sprintf("successfully created table file name start's with %s at %s", file, now.Format(time.RFC822))
