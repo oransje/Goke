@@ -144,6 +144,7 @@ password: root
 dialect: mysql
 sslmode: disable
 dbname: Goke_test
+sqlite_name: goke-test # As default, can be changed
 host: localhost
 port: 3306
 ```
