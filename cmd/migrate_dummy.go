@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"log"
 	"time"
 
 	"github.com/spf13/cobra"
@@ -21,13 +22,13 @@ var migrateCmd = &cobra.Command{
 			panic("Error while reading file goke-config..yaml ")
 		}
 
+		typ := handlers.HandleWithMigrateModel(c, handlers.ReadDummyBytes(), schema)
+		if typ.Problem != nil {
+			log.Fatalf("Error: %v", typ.Problem)
+		}
+		
 		handlers.CreateHistoryDb(schema, handlers.ReadDummyBytes())
 
-		typ := handlers.HandleWithMigrateModel(c, handlers.ReadDummyBytes(), schema)
-
-		if typ.Problem != nil {
-			panic("Error while reading file goke-config..yaml ")
-		}
 		println(typ.Message)
 	},
 }

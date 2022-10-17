@@ -14,7 +14,11 @@ func HandleWithMigrateModel(cfg *config.ConfigYaml, sql []byte, file string) Ret
 
 	_,err := db.Exec(string(sql))
 	if err != nil {
-		log.Fatalf("Failed to execute %s", file)
+		log.Fatalf("Error: %v",err)
+		return ReturnType{
+			Message: fmt.Sprintf("Error: %v",err),
+			Problem: err,
+		}
 	}
 	
 	defer db.Close()
