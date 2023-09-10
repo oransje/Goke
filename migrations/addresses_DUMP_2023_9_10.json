@@ -1,0 +1,101 @@
+[
+  {
+    "bairro": "Sé",
+    "cep": "01001-000",
+    "complemento": "lado ímpar",
+    "id": 1,
+    "localidade": "São Paulo",
+    "logradouro": "Praça da Sé",
+    "uf": "SP"
+  },
+  {
+    "bairro": "Downtown",
+    "cep": "12345-678",
+    "complemento": "Apt 4B",
+    "id": 2,
+    "localidade": "Cityville",
+    "logradouro": "123 Main St",
+    "uf": "CA"
+  },
+  {
+    "bairro": "Suburbia",
+    "cep": "98765-432",
+    "complemento": "",
+    "id": 3,
+    "localidade": "Villagetown",
+    "logradouro": "456 Elm St",
+    "uf": "NY"
+  },
+  {
+    "bairro": "Outskirts",
+    "cep": "54321-876",
+    "complemento": "Unit 5",
+    "id": 4,
+    "localidade": "Countryside",
+    "logradouro": "789 Oak St",
+    "uf": "TX"
+  },
+  {
+    "bairro": "Champs-Élysées",
+    "cep": "24680-135",
+    "complemento": "Appt Ȃ3",
+    "id": 5,
+    "localidade": "Paris",
+    "logradouro": "Élysée Boulevard",
+    "uf": "Île-de-France"
+  },
+  {
+    "bairro": "Emptyville",
+    "cep": "99999-999",
+    "complemento": null,
+    "id": 6,
+    "localidade": "Nowhere",
+    "logradouro": "700 Null St",
+    "uf": "NA"
+  },
+  {
+    "bairro": "Downtown",
+    "cep": "11111-111",
+    "complemento": "Suite 2A",
+    "id": 7,
+    "localidade": "Citysville",
+    "logradouro": "555 State St",
+    "uf": "TX"
+  },
+  {
+    "bairro": "Central Park",
+    "cep": "88888-888",
+    "complemento": "Unit 5",
+    "id": 8,
+    "localidade": "City Center",
+    "logradouro": "777 Park Ave",
+    "uf": "NY"
+  },
+  {
+    "bairro": "Undefined",
+    "cep": "22222-222",
+    "complemento": "Apt 1",
+    "id": 9,
+    "localidade": "Unknownville",
+    "logradouro": "123 Missing State St",
+    "uf": "NA"
+  },
+  {
+    "bairro": "Suburb",
+    "cep": "33333-333",
+    "complemento": "",
+    "id": 10,
+    "localidade": "Townton",
+    "logradouro": "456 Short St",
+    "uf": "AZ"
+  },
+  {
+    "bairro": "Hillside",
+    "cep": "55555-555",
+    "complemento": "Suite 10",
+    "id": 11,
+    "localidade": "Scenicville",
+    "logradouro": "987 Mountain Rd",
+    "uf": "CO"
+  }
+]
