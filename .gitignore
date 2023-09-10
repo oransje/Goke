@@ -4,10 +4,16 @@
 *.dll
 *.so
 *.dylib
+./bin
 
 #Ignore goke files
 *.sqlite3
 
+#IDE files
+./.idea
+./.vscode
+.vscode
+.idea
 
 # Test binary, built with `go test -c`
 *.test

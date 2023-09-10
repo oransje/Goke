@@ -1,8 +1,8 @@
 username: root
-password: root
+password: 123
 dialect: sqlite
 sslmode: disable
 dbname: Goke_test
 sqlite_name: goke-test
 host: localhost
-port: 3306
+port: 5432

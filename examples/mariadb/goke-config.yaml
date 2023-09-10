@@ -1,7 +1,0 @@
-username: root
-password: root
-dialect: mariadb
-sslmode: disable
-dbname: Goke_test
-host: localhost
-port: 3306

@@ -19,17 +19,17 @@ var RootCmd = &cobra.Command{
 		file, err := os.OpenFile("goke-config.yaml", 0, 0644)
 		if os.IsNotExist(err) {
 			file, err := os.Create("goke-config.yaml")
-			dummy, errs := os.Create("dummy.sql")
+			dummy, errs := os.Create("goke.sql")
 			if errs != nil {
-				panic("Failed while creating dummy.sql")
+				panic("Failed creating goke.sql")
 			}
 			dummy.WriteString(TODO_DUMMY)
 			file.WriteString("username: root\n")
 			file.WriteString("password: root\n")
-			file.WriteString("dialect: mysql\n")
+			file.WriteString("dialect: sqlite # using SQLITE by default\n")
 			file.WriteString("sslmode: disable\n")
 			file.WriteString("dbname: Goke_test\n")
-			file.WriteString("sqlite_name: goke-test\n")
+			file.WriteString("sqlite_name: goke-test # SQLITE filename\n")
 			file.WriteString("host: localhost\n")
 			file.WriteString("port: 3306")
 			if err != nil {

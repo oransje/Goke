@@ -1,8 +1,0 @@
-[
-  "{\"content\":\"WORLD\",\"created_at\":null,\"done\":false,\"id\":1,\"title\":\"HELLO\",\"updated_at\":null}",
-  "{\"content\":\"vsantos1\",\"created_at\":null,\"done\":false,\"id\":2,\"title\":\"github/\",\"updated_at\":null}",
-  "{\"content\":\"sqlite\",\"created_at\":null,\"done\":false,\"id\":3,\"title\":\"goke\",\"updated_at\":null}",
-  "{\"content\":\"sqlite3\",\"created_at\":null,\"done\":false,\"id\":4,\"title\":\"goke\",\"updated_at\":null}",
-  "{\"content\":\"postgres\",\"created_at\":null,\"done\":false,\"id\":5,\"title\":\"goke\",\"updated_at\":null}",
-  "{\"content\":\"mysql/mariadb\",\"created_at\":null,\"done\":false,\"id\":6,\"title\":\"goke\",\"updated_at\":null}"
-]
