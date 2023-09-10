@@ -30,6 +30,8 @@ $ goke migrate
 $ goke dump --json todo
 ```
 
+## Old version (0.1.2)
+
 <img  src="./examples/todo_table.png"/>
 
 <img  src="./examples/dumpped_table.png"/>
@@ -41,6 +43,12 @@ Yes, it is.
   - Reading the JSON file with `PYTHON`:
 
 <img  src="./examples/read_json.png"/>
+
+## New version (0.1.3)
+
+<img  src="./examples/migrated_address.png"/>
+
+<img  src="./examples/table_address.png"/>
 
 ## How to use
 
@@ -56,13 +64,12 @@ OR
 ```bash
 
 #Windows
-
 export ${NAME}=${PATH_TO_BIN}
+
 #Linux
-
 export ${NAME}=${PATH_TO_BIN}
-#Mac
 
+#Mac
 export ${NAME}=${PATH_TO_BIN}
 
 ```
@@ -207,6 +214,8 @@ Response
 
 - [x] v0.1.2
       [Release page](https://github.com/vsantos1/Goke/releases) (**NEW**) - Added support for MariaDB
+
+- [x] v0.1.3 New JSON dump format and build script
 
 **OLD**
 
