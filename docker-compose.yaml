@@ -1,0 +1,34 @@
+version: "3.1"
+services:
+  # WARNNING: MARIADB/MYSQL USES SAME PORTS: "3306:3306" BY DEFAULT !!!
+  db:
+    container_name: mysql_goke
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: Goke_test
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD:
+    ports:
+      - "3306:3306"
+  gokepostgres:
+    container_name: postgres_goke
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: Goke_test
+    ports:
+      - "5432:5432"
+  gokemariadb:
+    container_name: mariadb_goke
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Goke_test
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    ports:
+      - "3306:3306"
