@@ -11,4 +11,4 @@ const TODO_DUMMY = `CREATE TABLE IF NOT EXISTS todo(
 )
 `
 
-const VERSION = "v0.1.2"
+const VERSION = "v0.1.3"
