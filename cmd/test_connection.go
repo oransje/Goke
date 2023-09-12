@@ -9,17 +9,15 @@ import (
 var testCmd = &cobra.Command{
 	Use:   "test",
 	Short: "Test your database connection from goke-config.yaml",
-	Run: func(cmd *cobra.Command, args []string) {
-		c, err := config.ReadConfigFile("goke-config.yaml")
-		if err != nil {
-			panic("[Error]: reading file configuration file")
-		}
-
-		println(database.TestDatabaseconnection(c))
-
-	},
+	Run:   testCmdRunner,
 }
 
-func init() {
-	RootCmd.AddCommand(testCmd)
+func testCmdRunner(cmd *cobra.Command, args []string) {
+	c, err := config.ReadConfigFile("goke-config.yaml")
+	if err != nil {
+		panic("[Error]: reading file configuration file")
+	}
+
+	println(database.TestDatabaseconnection(c))
+
 }

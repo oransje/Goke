@@ -13,24 +13,21 @@ var table string
 var dropCmd = &cobra.Command{
 	Use:   "drop",
 	Short: "Drop table from database",
-	RunE: func(cmd *cobra.Command, args []string) error {
-		time.Sleep(1000)
-		c, err := config.ReadConfigFile("goke-config.yaml")
-		if err != nil {
-			panic("[Error]: reading file goke-config.yaml ")
-		}
-		t := handlers.DropTableQuery(c, table)
-		handlers.DropSchemaHistory(table)
-		println(t.Message)
-		if t.Problem != nil {
-			panic("Failed to drop table ")
-
-		}
-		return nil
-	},
+	RunE:  dropCmdRunner,
 }
 
-func init() {
-	dropCmd.Flags().StringVarP(&table, "table", "t", "", "Drop table if exists")
-	RootCmd.AddCommand(dropCmd)
+func dropCmdRunner(cmd *cobra.Command, args []string) error {
+	time.Sleep(1000)
+	c, err := config.ReadConfigFile("goke-config.yaml")
+	if err != nil {
+		panic("[Error]: reading file goke-config.yaml ")
+	}
+	t := handlers.DropTableQuery(c, table)
+	handlers.DropSchemaHistory(table)
+	println(t.Message)
+	if t.Problem != nil {
+		panic("Failed to drop table ")
+
+	}
+	return nil
 }
